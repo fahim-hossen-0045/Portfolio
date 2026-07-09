@@ -1,0 +1,52 @@
+/* Rotating "verified" ring + QA stamp badge around the hero photo */
+
+.home-img{
+  --ring-color: var(--accent, #e8a33d);
+}
+
+.home-img::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  border:2px dashed var(--ring-color);
+  opacity:.7;
+  animation:ajring-spin 18s linear infinite;
+}
+
+.home-img::after{
+  content:'✓ QA PASSED';
+  position:absolute;
+  bottom:6%;
+  right:0%;
+  transform:translateX(12%);
+  background:var(--accent, #e8a33d);
+  color:var(--bg, #0d1a18);
+  font-family:'JetBrains Mono', monospace;
+  font-size:1.15rem;
+  font-weight:600;
+  letter-spacing:.5px;
+  padding:.7rem 1.3rem;
+  border-radius:999px;
+  box-shadow:0 10px 24px -8px rgba(0,0,0,0.55);
+  white-space:nowrap;
+  animation:ajring-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes ajring-spin{
+  from{ transform:rotate(0deg); }
+  to{ transform:rotate(360deg); }
+}
+
+@keyframes ajring-pulse{
+  0%, 100%{ transform:translateX(12%) translateY(0); }
+  50%{ transform:translateX(12%) translateY(-6px); }
+}
+
+@media (max-width: 780px){
+  .home-img::after{ font-size:1rem; padding:.55rem 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .home-img::before, .home-img::after{ animation:none; }
+}

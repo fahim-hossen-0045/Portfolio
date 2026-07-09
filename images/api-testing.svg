@@ -1,0 +1,20 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="apBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16302c"/>
+      <stop offset="1" stop-color="#0d1a18"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#apBg)"/>
+  <text x="70" y="175" font-family="JetBrains Mono, monospace" font-size="60" fill="#e8a33d">{</text>
+  <text x="300" y="175" font-family="JetBrains Mono, monospace" font-size="60" fill="#4fd1b8">}</text>
+  <g stroke="#eef1ea" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)">
+    <line x1="150" y1="110" x2="245" y2="110"/>
+  </g>
+  <g stroke="#a9bdb7" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10">
+    <line x1="245" y1="190" x2="150" y2="190"/>
+  </g>
+  <polygon points="245,104 258,110 245,116" fill="#eef1ea"/>
+  <polygon points="150,184 137,190 150,196" fill="#a9bdb7"/>
+  <circle cx="200" cy="150" r="3" fill="#e8a33d"/>
+</svg>

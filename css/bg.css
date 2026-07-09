@@ -1,0 +1,42 @@
+/* Canvas particle layer (populated by js/particles.js) */
+#particles canvas{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:-2;
+  display:block;
+}
+
+/* Ambient drifting glow blobs (populated by js/bg.js) */
+.bg-blob{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(80px);
+  z-index:-2;
+  pointer-events:none;
+  opacity:.35;
+  animation:bg-drift 22s ease-in-out infinite;
+}
+.bg-blob.b1{
+  width:38vw; height:38vw;
+  top:-10%; left:-8%;
+  background:var(--accent, #e8a33d);
+  animation-duration:26s;
+}
+.bg-blob.b2{
+  width:32vw; height:32vw;
+  bottom:-12%; right:-6%;
+  background:var(--teal, #4fd1b8);
+  animation-duration:30s;
+  animation-delay:-6s;
+}
+
+@keyframes bg-drift{
+  0%, 100%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(4%, 6%) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .bg-blob{ animation:none; }
+}

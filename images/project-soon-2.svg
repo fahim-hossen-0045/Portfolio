@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ps2Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16302c"/>
+      <stop offset="1" stop-color="#0d1a18"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#ps2Bg)"/>
+  <g stroke="#e8a33d" stroke-width="3" fill="none">
+    <path d="M150 190 L150 150 A50 50 0 1 1 250 150 L250 190"/>
+  </g>
+  <circle cx="200" cy="205" r="7" fill="#4fd1b8"/>
+  <text x="200" y="245" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" fill="#a9bdb7">SOMETHING NEW</text>
+</svg>
